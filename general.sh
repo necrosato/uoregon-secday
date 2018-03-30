@@ -11,7 +11,7 @@ KEYDIR=~/.msssh/
 KEYPATH=~/.msssh/id_rsa
 
 mkdir ${KEYDIR}
-echo -e ${KEY} > ${KEYPATH}
+echo "${KEY}" > ${KEYPATH}
 chmod 400 ${KEYPATH}
 
 cd ${ARCHIVE}
