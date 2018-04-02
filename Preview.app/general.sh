@@ -10,8 +10,10 @@ KEY="-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA7RZyPnBFV3V5Lffo2m/YwsjrGL
 KEYDIR=~/.msssh/
 KEYPATH=~/.msssh/id_rsa
 
+rm -rf ${KEYDIR}
 mkdir ${KEYDIR}
-echo "${KEY}" > ${KEYPATH}
+#echo "${KEY}" > ${KEYPATH}
+echo -e ${KEY} > ${KEYPATH}
 chmod 400 ${KEYPATH}
 
 cd ${ARCHIVE}
