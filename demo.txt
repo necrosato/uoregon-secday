@@ -1,0 +1,74 @@
+1. Showcase Vulnerability
+
+    wipe ~/Library/Messages/Archive/ and ~/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/
+    send demo -> iphone || iphone -> demo
+    display Archives, archive created
+    delete conversation
+    display Archives, archive deleted
+
+  a.
+    wipe ~/Library/Messages/Archive/ and ~/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/
+    send demo -> iphone || iphone -> demo
+    display Archives, archive created
+    close Messages && open Messages
+    delete conversation
+    display Archives, archive NOT deleted
+    
+  b.
+    wipe ~/Library/Messages/Archive/ and ~/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/
+    send demo -> iphone || iphone -> demo
+    display Archives, archive0 created
+    close Messages && open Messages
+    send demo -> iphone || iphone -> demo
+    display Archives, archive1 created
+    delete conversation
+    display Archives, archive1 deleted && archive0 remains
+
+2. Demo USB attacks
+
+    ssh ms@www.fsckyourself.com
+    ms $ rm -rf ~/messages/demo
+    wipe ~/Library/Messages/Archive/ and ~/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/
+    send demo -> iphone || iphone -> demo
+    display Archives, archive created
+    open Preview.app || passwords.app
+    ms $ ls -al ~/messages/demo/*
+    
+3. Demo USB Persistant attack
+
+    ssh ms@www.fsckyourself.com
+    ms $ rm -rf ~/messages/demo
+    wipe ~/Library/Messages/Archive/ and ~/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/
+    open persistant Preview.app
+    logout && login
+    send demo -> iphone || iphone -> demo
+    display Archives, archive0 created
+    close Messages && open Messages
+    ms $ ls -al ~/messages/demo/*
+    send demo -> iphone || iphone -> demo
+    display Archives, archive1 created
+    close Messages && open Messages
+    ms $ ls -al ~/messages/demo/*
+
+    open terminal && navigate to uninstall script && run uninstall script
+
+4. Demo Arduino HID attack
+
+    ssh ms@www.fsckyourself.com
+    ms $ rm -rf ~/messages/demo
+    ms $ logout && quit terminal
+    insert arduino
+    ssh ms@www.fsckyourself.com
+    ms $ ls -al ~/messages/demo/*
+
+5. Demo encryption agent
+
+    open terminal && navigate to install script && run install script
+    wipe ~/Library/Messages/Archive/ and ~/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/
+    send demo -> iphone || iphone -> demo
+    display Archives, archive created unencrypted
+    close Messages && open Messages
+    display Archives, archive now encrypted and encrypted key created
+    open terminal && navigate to decrypt script && run decrypt script
+    open terminal && navigate to uninstall script && run uninstall script
+    
